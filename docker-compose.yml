@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  processor:
+    build: .
+    volumes:
+      - ./data:/app/input
+      - ./output:/app/output
+    environment:
+      - INPUT_FILE=/app/input/random_objects.txt
+      - OUTPUT_FILE=/app/output/results.txt
